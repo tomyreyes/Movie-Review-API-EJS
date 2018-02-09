@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/body.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </head>
+    <body>
+       <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+            <a href="http://localhost:8080/" class="brand-logo center">Rotten Potatoes</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+       <div class="container">
+  <form action= '/search' method='GET'>
+      <div class="input-field">
+      <i class="material-icons prefix">movie</i>
+      <input id="icon_movie" type="text" class="validate" name="searchTerm" onkeydown="if (event.keyCode == 13)">
+      <label for="icon_movie">Find Movie</label>
+        </div>
+      </form>
+      </div>
+      <div class="row">
+    <form class="col s12">
+      
+    </form>
+  </div>

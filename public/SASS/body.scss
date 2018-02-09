@@ -1,0 +1,36 @@
+$body-color:black; 
+$body-font: sans-serif;
+$small-potato-size: 12%; 
+$large-potato-size: 5%;
+$medium-potato-size: 1%;
+
+
+h1{
+    color: $body-color;
+    font-family: $body-font;
+}
+
+h2{
+    @extend h1;
+}
+h3{
+    @extend h1;
+}
+
+a p{
+    @extend h1; 
+    
+}
+
+.potato {
+    width: $small-potato-size;
+
+}
+
+.largePotato{
+    width: $large-potato-size;
+}
+
+.mediumPotato{
+    width: $medium-potato-size;
+}

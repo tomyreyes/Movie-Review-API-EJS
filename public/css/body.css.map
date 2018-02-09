@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "body.css",
+	"sources": [
+		"../SASS/body.scss"
+	],
+	"sourcesContent": [
+		"$body-color:black; \n$body-font: sans-serif;\n$small-potato-size: 12%; \n$large-potato-size: 5%;\n$medium-potato-size: 1%;\n\n\nh1{\n    color: $body-color;\n    font-family: $body-font;\n}\n\nh2{\n    @extend h1;\n}\nh3{\n    @extend h1;\n}\n\na p{\n    @extend h1; \n    \n}\n\n.potato {\n    width: $small-potato-size;\n\n}\n\n.largePotato{\n    width: $large-potato-size;\n}\n\n.mediumPotato{\n    width: $medium-potato-size;\n}"
+	],
+	"names": [],
+	"mappings": "AAOA,AAAA,EAAE,EAKF,AALA,EAKE,EAGF,AARA,EAQE,EAIF,AAZA,CAYC,CAAC,CAAC,CAZD;EACE,KAAK,EARG,KAAK;EASb,WAAW,EARH,UAAU,GASrB;;AAcD,AAAA,OAAO,CAAC;EACJ,KAAK,EAvBW,GAAG,GAyBtB;;AAED,AAAA,YAAY,CAAA;EACR,KAAK,EA3BW,EAAE,GA4BrB;;AAED,AAAA,aAAa,CAAA;EACT,KAAK,EA9BY,EAAE,GA+BtB"
+}
