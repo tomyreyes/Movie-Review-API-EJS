@@ -22,19 +22,19 @@ let options = {
 }
 
 request(options, function (error, response, body) {
-
     if (error) throw new Error(error);
 
-    fs.writeFileSync('list.txt', JSON.stringify(body.results), (err) => {
+    fs.writeFile('list.txt', JSON.stringify(body.results), (err) => {
     })
 });
 
-
-
 let movieDb
-fs.readFileSync('list.txt', 'UTF8', (err, data)=>{
+
+
+fs.readFile('list.txt', 'UTF8', (err, data)=>{
     movieDb = JSON.parse(data)
 })
+
 
 app.get('/', (req, res)=>{
     res.render('index',{
@@ -66,7 +66,7 @@ function filterMovie(searchTerm) {
         let titleArray = movie.title.split(' ')
         titleArray.forEach((titleWord, index) => {
             arrayOfTerms.forEach((word, index) => {
-                if (titleWord.toUpperCase() == word.toUpperCase()) {
+                if (titleWord.toUpperCase().includes(word.toUpperCase())) {
                     count++
                 }
             })
