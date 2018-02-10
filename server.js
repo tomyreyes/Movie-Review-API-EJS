@@ -7,13 +7,14 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 
+
 let options = {
     method: 'GET',
     url: 'https://api.themoviedb.org/4/list/1',
     qs: { api_key: '2d1610b0077610c43b2fe59ad827cfec', page: '1' },
     headers:
         {
-            authorization: 'Bearer <<access_token>>',
+            authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZDE2MTBiMDA3NzYxMGM0M2IyZmU1OWFkODI3Y2ZlYyIsInN1YiI6IjVhNzFmZTVjMGUwYTI2NWFmMjAwYzAwYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1AbXhcWFz0KbNElO3dRBGzq8Lk5KGLT7y5mytHrxdVE',
             'content-type': 'application/json;charset=utf-8'
         },
     body: {},
@@ -21,26 +22,19 @@ let options = {
 }
 
 request(options, function (error, response, body) {
-    
+
     if (error) throw new Error(error);
-    
-    fs.writeFile('list.txt', JSON.stringify(body.results), (err) => {
+
+    fs.writeFileSync('list.txt', JSON.stringify(body.results), (err) => {
     })
 });
 
 
+
 let movieDb
-fs.readFile('list.txt', 'UTF8', (err, data)=>{
+fs.readFileSync('list.txt', 'UTF8', (err, data)=>{
     movieDb = JSON.parse(data)
 })
-
-
-
-
-
-
-
-
 
 app.get('/', (req, res)=>{
     res.render('index',{
@@ -100,11 +94,6 @@ function getMovies(movieId) {
     }  
     return filteredMovie
 }
-
-
-
-
-
 
 
 app.listen(port, () => {
