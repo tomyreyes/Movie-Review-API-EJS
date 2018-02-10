@@ -6,7 +6,7 @@ const fs = require('fs')
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-
+let movieDb
 
 let options = {
     method: 'GET',
@@ -28,9 +28,6 @@ request(options, function (error, response, body) {
     })
 });
 
-let movieDb
-
-
 fs.readFile('list.txt', 'UTF8', (err, data)=>{
     movieDb = JSON.parse(data)
 })
@@ -42,7 +39,6 @@ app.get('/', (req, res)=>{
 
     })
 })
-
 
 app.get('/movie/:movieId', (req, res) => {
     const {movieId} = req.params
@@ -79,7 +75,6 @@ function filterMovie(searchTerm) {
     return filteredDB
 }
 
-
 function getMovies(movieId) {
     let filteredMovie 
     if (movieId === undefined) {
@@ -94,7 +89,6 @@ function getMovies(movieId) {
     }  
     return filteredMovie
 }
-
 
 app.listen(port, () => {
     console.log(`Now listening on port: ${port}`)
