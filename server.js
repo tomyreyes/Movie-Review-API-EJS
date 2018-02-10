@@ -25,14 +25,14 @@ request(options, function (error, response, body) {
 
     if (error) throw new Error(error);
 
-    fs.writeFile('list.txt', JSON.stringify(body.results), (err) => {
+    fs.writeFileSync('list.txt', JSON.stringify(body.results), (err) => {
     })
 });
 
 
 
 let movieDb
-fs.readFile('list.txt', 'UTF8', (err, data)=>{
+fs.readFileSync('list.txt', 'UTF8', (err, data)=>{
     movieDb = JSON.parse(data)
 })
 
