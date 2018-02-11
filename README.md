@@ -2,7 +2,7 @@
 
 This is a movie review database website inspired by [IMDB](http://www.imdb.com/) and [Rotten Tomatoes](https://www.rottentomatoes.com/). I created this website using server-side rendering and I implemented this using node, express, EJS, SASS and Materialize.
 Server-side rendering refers to the creation of dynamic content within a pre-built structure in a web application. For instance, when we look at many social media applications, for example
-Instagramm we see that the structure of users' pages are all the same, but the content within it is not. It would be inefficient to create a separate page for each user, when the structure of their web pages are the same. Instead of doing this, server-side rendering enables 
+Instagram we see that the structure of users' pages are all the same, but the content within it is not. It would be inefficient to create a separate page for each user, when the structure of their web pages are all the same. Instead of doing this, server-side rendering enables 
 developers to create a template that will be used by all users. The only difference is that the information that is displayed in these templates will be different.
 To generate the different user pages, there will be code within this template that provides the page with the requested content. 
 This code will be linked to server-side code that handle the requests and handle the information of the users such as their usernames, passwords and pictures. 
