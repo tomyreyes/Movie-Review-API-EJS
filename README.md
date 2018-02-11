@@ -7,8 +7,8 @@ developers to create a template that will be used by all users. The only differe
 To generate the different user pages, there will be code within this template that provides the page with the requested content. 
 This code will be linked to server-side code that handle the requests and handle the information of the users such as their usernames, passwords and pictures. 
 
-In this assignment the template engine I used was Embedded Javascript (EJS). An interesting thing that I utilized within EJS is partials. Partials enable users to create 
-re-usable HTML web page structures. For example, in my movie website I use the exact same navigation bar for all pages. With EJS partials, I am able to create a file that contains a navigation bar
+In this assignment the template engine I used was Embedded JavaScript (EJS). An interesting thing that I utilized within EJS is partials. Partials enable users to create 
+re-usable web page structures. These structures can contain JavaScript within them. For example, in my movie website I use the exact same navigation bar for all pages. With EJS partials, I am able to create a file that contains a navigation bar
 that can be included on all my pages. Since this is just in one file, every change I make to this navbar will be implemented on every web page that includes it. 
 
 To obtain the content for my application I used [The Movie Database's](https://www.themoviedb.org/?language=en) API, node and Express. 
